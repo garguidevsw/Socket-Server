@@ -42,11 +42,14 @@ export default class Server {
             //Pendiente de configurar usuario
             socket.configurarUsuario( cliente, this.io );
 
+            // Obtener usuarios
+            socket.obtenerUsuarios( cliente, this.io );
+
             //Pendiente de los mensajes
             socket.mensaje( cliente, this.io );
 
             //Pendiente de Desconectar
-            socket.desconectar( cliente );
+            socket.desconectar( cliente, this.io );
 
         });
 
